@@ -1,2 +1,2 @@
 #This is the simple and easy website that get the info about weather like city, temperature, and weather condition, etc. 
-![result](src/images/image1.png)
+![result](result.png)
