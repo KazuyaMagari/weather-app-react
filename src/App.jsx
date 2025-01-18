@@ -3,7 +3,7 @@ import Form from "./components/Form"
 import Result from "./components/Result"
 import {useState} from "react"
 import { createGlobalStyle } from 'styled-components'
-import IMG from '../src/images/img2.jpeg'
+import IMG from '../src/images/image1.jpg'
 
 const GlobalStyle = createGlobalStyle`
   body {
