@@ -3,14 +3,18 @@ import Form from "./components/Form"
 import Result from "./components/Result"
 import {useState} from "react"
 import { createGlobalStyle } from 'styled-components'
-import IMG from '../src/images/image1.jpg'
-
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import IMG from "./assets/1082.jpg"
+import Header from "./components/header"
+import Side from "./components/Side"
 const GlobalStyle = createGlobalStyle`
   body {
     background-image: url(${IMG});
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;        
     margin: 0;
+    font-family: Sans Serif Collection serif;
   }
 `
 const App = () =>{
@@ -38,12 +42,18 @@ http://api.weatherapi.com/v1/current.json?key=1056435816a1487ab09224739242312&q=
         })
     }
   return (
-  <div>
+    <>
     <GlobalStyle/>
+    <Header />
+    <main>
+    
     <Title/>
     <Form setCity={setCity} getWeather={getWeather}/>
 
     <Result results={results}/>
-  </div>)
+    <Side />
+  </main>
+    </>
+  )
 }
 export default App
