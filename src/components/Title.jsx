@@ -6,7 +6,7 @@ const Heading1 = styled.h1`
 `
 const Title = () => {
     return (
-        <Heading1>Weather App</Heading1>
+        <Heading1 style={{fontSize: "60px"}}>Weather App</Heading1>
     )
 }
 export default Title
