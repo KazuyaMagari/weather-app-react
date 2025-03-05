@@ -4,7 +4,7 @@ import Result from "./components/Result"
 import {useState} from "react"
 import { createGlobalStyle } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import IMG from "./assets/1082.jpg"
+import IMG from "./1082.jpg"
 import Header from "./components/header"
 import Side from "./components/Side"
 const GlobalStyle = createGlobalStyle`
