@@ -1,4 +1,4 @@
-import { useState } from "react"
+import {Button} from "react-bootstrap"
 import styled from 'styled-components'
 const Div = styled.div`
     text-align: center;
@@ -12,9 +12,9 @@ const Form = (props) => {
         <form onSubmit={props.getWeather}>
             <input type="text" name="city" placeholder="都市" value={props.city} onChange={e => 
                 props.setCity(e.target.value)
-            }/>
+            } className="me-2"/>
             
-            <button type="submit">Get Weather</button>
+            <Button variant="primary" type="submit" className="me-2">Submit</Button>
         </form>
         </Div>
     )
