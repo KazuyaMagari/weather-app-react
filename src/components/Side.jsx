@@ -3,8 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import NEWS from '../assets/news.jpg';
-import WeatherAI from '../assets/AIweather.jpg';
+import NEWS from '../public/assets/News.jpg';
+import WeatherAI from '../public/assets/AIweather.jpg';
 import { useNavigate } from 'react-router-dom';
 
 function Side() {
