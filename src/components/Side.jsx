@@ -3,9 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import NEWS from '../public/assets/News.jpg';
-import WeatherAI from '../public/assets/AIweather.jpg';
 import { useNavigate } from 'react-router-dom';
+import NEWS from '../public/assets/news.jpg';
+import AI from '../public/assets/AIweather.jpg';
 
 function Side() {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function Side() {
             <Card style={{ width: '100%', height: '100%' }}>
               <Card.Img
                 variant="top"
-                src={WeatherAI}
+              src={AI}
                 className="card-img"
               />
               <Card.Body className="d-flex flex-column">
