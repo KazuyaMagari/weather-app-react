@@ -1,22 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Title from "./components/Title"
 import Form from "./components/Form"
 import Result from "./components/Result"
+import NewsComp from "./components/NewsComp";
 import {useState} from "react"
 import { createGlobalStyle } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import IMG from "./1082.jpg"
 import Header from "./components/header"
 import Side from "./components/Side"
+
 const GlobalStyle = createGlobalStyle`
   body {
     background-image: url(${IMG});
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;        
+    min-height: 100vh;       
     margin: 0;
-    font-family: Sans Serif Collection serif;
+    font-family: Sans Serif Collection, serif;
   }
 `
+
 const App = () =>{
   const [city, setCity] =useState("")
   const [results, setResults] = useState({
@@ -26,6 +30,7 @@ const App = () =>{
     conditionText: "",
     icon: ""
   })
+
   const getWeather = (e) => {
         e.preventDefault()
         fetch(`
@@ -41,19 +46,28 @@ http://api.weatherapi.com/v1/current.json?key=1056435816a1487ab09224739242312&q=
           })
         })
     }
+
   return (
     <>
     <GlobalStyle/>
-    <Header />
-    <main>
-    
-    <Title/>
-    <Form setCity={setCity} getWeather={getWeather}/>
-
-    <Result results={results}/>
-    <Side />
-  </main>
+    <BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Title/>
+              <Form setCity={setCity} getWeather={getWeather}/>
+              <Result results={results}/>
+              <Side />
+            </>
+          } />
+          <Route path="/news" element={<NewsComp />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
     </>
   )
 }
 export default App
+
