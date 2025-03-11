@@ -10,7 +10,7 @@ const Form = (props) => {
     return (
         <Div>
         <form onSubmit={props.getWeather}>
-            <input type="text" name="city" placeholder="都市" value={props.city} onChange={e => 
+            <input type="text" name="city" placeholder="Enter Any City" value={props.city} onChange={e => 
                 props.setCity(e.target.value)
             } className="me-2"/>
             
