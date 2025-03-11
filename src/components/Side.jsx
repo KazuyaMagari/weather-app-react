@@ -3,49 +3,54 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import NEWS from '../assets/news.jpg';
+import WeatherAI from '../assets/AIweather.jpg';
+import { useNavigate } from 'react-router-dom';
 
 function Side() {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="text-center my-4">Side</div>
+      <div className="text-center my-4 fs-2">More About</div>
       <div className="container">
-        <Row>
-          <Col md={4} className="mb-4">
-            <Card style={{ width: '100%' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+        <Row className="justify-content-center">
+          <Col xs={12} sm={6} md={4} className="mb-4">
+            <Card style={{ width: '100%', height: '100%' }}>
+              <Card.Img
+                variant="top"
+                src={NEWS}
+                className="card-img"
+              />
+              <Card.Body className="d-flex flex-column">
+                <Card.Title>News</Card.Title>
+                <hr />
+                <Card.Text style={{ flexGrow: 1 }}>
+                  Stay up-to-date with the latest news articles and headlines from around the world.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary" onClick={() => navigate("/news")}>
+                  Read News
+                </Button>
               </Card.Body>
             </Card>
           </Col>
-          <Col md={4} className="mb-4">
-            <Card style={{ width: '100%' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+
+          <Col xs={12} sm={6} md={4} className="mb-4">
+            <Card style={{ width: '100%', height: '100%' }}>
+              <Card.Img
+                variant="top"
+                src={WeatherAI}
+                className="card-img"
+              />
+              <Card.Body className="d-flex flex-column">
+                <Card.Title>AI Forecast</Card.Title>
+                <hr />
+                <Card.Text style={{ flexGrow: 1 }}>
+                  Get weather predictions powered by AI models for accurate forecasting.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4} className="mb-4">
-            <Card style={{ width: '100%' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary" onClick={() => navigate("/weather-ai")}>
+                  See Forecast
+                </Button>
               </Card.Body>
             </Card>
           </Col>
