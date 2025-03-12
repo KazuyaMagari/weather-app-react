@@ -22,10 +22,10 @@ function NewsComp() {
       <div className='container mt-5'>
         <div className="row justify-content-center">
           <div className="col-5">
-            <h2 className=''>Know the news and weather at the same time</h2>
+            <h2 className=''>Know the news and weather at the same time (due to the setting of API, it works on only localhost)</h2>
             <Form className='align-items-center mb-4' onSubmit={handleSubmit}>
               <Form.Group controlId="formDate">
-                <Form.Label>Select a date (invalid a month ago from today):</Form.Label>
+                <Form.Label>Select a date (invalid a month ago from today) :</Form.Label>
                 <Form.Control 
                   type="date" 
                   value={startDate} 
