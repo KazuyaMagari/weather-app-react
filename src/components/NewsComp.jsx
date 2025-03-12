@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
@@ -5,17 +6,18 @@ import Form from 'react-bootstrap/Form';
 function NewsComp() {
   const [news, setNews] = useState([]);
   const [startDate, setStartDate] = useState('');
-
-  const API_KEY = "ad6eef044bd14ec1927a3eba5ec0db55";
- 
+  const API_KEY = "a8a03c38430945e9a7ab0ede1ad208e5";
+  const BASE_URL = "https://newsapi.org/v2/everything";
   const fetchNews = async () => {
     if (!startDate) return;
     
-    const url = `https://newsapi.org/v2/everything?q=(Google OR Amazon) AND Cloud&from=${startDate}T00:00:00&to=${startDate}T23:59:59&sortBy=relevancy&pageSize=5&apiKey=${API_KEY}`;
+    const url = `${BASE_URL}?q=(Google OR Amazon) AND Cloud&from=${startDate}T00:00:00&to=${startDate}T23:59:59&sortBy=relevancy&pageSize=5&apiKey=${API_KEY}`;
+    
     try {
       const response = await fetch(url);
       const data = await response.json();
       setNews(data.articles);
+      console.log(data.articles);
     } catch (error) {
       console.error("ニュースを取得できませんでした", error);
     }
@@ -23,7 +25,6 @@ function NewsComp() {
   
   return (
     <>
-
     <div className='container mt-5'>
       <div className="row justify-content-center">
         <div className="col-5">
@@ -46,11 +47,9 @@ function NewsComp() {
         </div>  
       </div> 
     </div>
-
     <div className='container'>
       <div className="row align-items-center">
         
-
         
     {news.length > 0 ? (
         news.map((article, index) => (
@@ -74,5 +73,6 @@ function NewsComp() {
     </>
   )
 }
-
 export default NewsComp
+
+ 
