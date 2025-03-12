@@ -33,8 +33,8 @@ const App = () =>{
 
   const getWeather = (e) => {
         e.preventDefault()
-        fetch(`
-http://api.weatherapi.com/v1/current.json?key=1056435816a1487ab09224739242312&q=${city}&aqi=no`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=1056435816a1487ab09224739242312&q=${city}&aqi=no`)
+
         .then(res => res.json())
         .then(data => {
           setResults({
