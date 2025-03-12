@@ -17,11 +17,16 @@ function Side() {
         <Row className="justify-content-center">
           <Col xs={12} sm={6} md={4} className="mb-4">
             <Card style={{ width: '100%', height: '100%' }}>
-              <Card.Img
-                variant="top"
-                src={NEWS}
-                className="card-img"
-              />
+              <div style={{ height: '200px' }}>
+                <Card.Img
+                  variant="top"
+                  src={NEWS}
+                  style={{
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
               <Card.Body className="d-flex flex-column">
                 <Card.Title>News</Card.Title>
                 <hr />
@@ -37,11 +42,16 @@ function Side() {
 
           <Col xs={12} sm={6} md={4} className="mb-4">
             <Card style={{ width: '100%', height: '100%' }}>
-              <Card.Img
-                variant="top"
-              src={AI}
-                className="card-img"
-              />
+              <div style={{ height: '200px' }}>
+                <Card.Img
+                  variant="top"
+                  src={AI}
+                  style={{
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+              </div>
               <Card.Body className="d-flex flex-column">
                 <Card.Title>AI Forecast</Card.Title>
                 <hr />
