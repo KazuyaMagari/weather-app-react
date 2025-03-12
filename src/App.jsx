@@ -7,7 +7,7 @@ import {useState} from "react"
 import { createGlobalStyle } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import IMG from "./1082.jpg"
-import Header from "./components/Header"
+import Header from "./components/header"
 import Side from "./components/Side"
 
 const GlobalStyle = createGlobalStyle`
