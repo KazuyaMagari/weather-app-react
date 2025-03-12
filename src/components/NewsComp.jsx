@@ -7,11 +7,11 @@ function NewsComp() {
   const [startDate, setStartDate] = useState('');
 
   const API_KEY = "ad6eef044bd14ec1927a3eba5ec0db55";
-  const BASE_URL = "https://newsapi.org/v2/everything";
+  const BASE_URL = "";
   const fetchNews = async () => {
     if (!startDate) return;
     
-    const url = `${BASE_URL}?q=(Google OR Amazon) AND Cloud&from=${startDate}T00:00:00&to=${startDate}T23:59:59&sortBy=relevancy&pageSize=5&apiKey=${API_KEY}`;
+    const url = `https://newsapi.org/v2/everything?q=(Google OR Amazon) AND Cloud&from=${startDate}T00:00:00&to=${startDate}T23:59:59&sortBy=relevancy&pageSize=5&apiKey=${API_KEY}`;
     
     try {
       const response = await fetch(url);
