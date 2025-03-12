@@ -6,7 +6,7 @@ function NewsComp() {
   const [news, setNews] = useState([]);
   const [startDate, setStartDate] = useState('');
 
-  const API_KEY = "a8a03c38430945e9a7ab0ede1ad208e5";
+  const API_KEY = "ad6eef044bd14ec1927a3eba5ec0db55";
   const BASE_URL = "https://newsapi.org/v2/everything";
   const fetchNews = async () => {
     if (!startDate) return;
@@ -17,7 +17,6 @@ function NewsComp() {
       const response = await fetch(url);
       const data = await response.json();
       setNews(data.articles);
-      console.log(data.articles);
     } catch (error) {
       console.error("ニュースを取得できませんでした", error);
     }
