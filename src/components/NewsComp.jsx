@@ -24,6 +24,7 @@ function NewsComp() {
           <div className="row justify-content-center">
             <div className="col-5">
               <h2>Know the news and weather at the same time (due to the setting of API, it works on only localhost)</h2>
+              <h3><a href="https://github.com/KazuyaMagari/weather-app-react">Download from gitHub repository</a></h3>
               <Form className="align-items-center mb-4" onSubmit={handleSubmit}>
                 <Form.Group controlId="formDate">
                   <Form.Label>Select a date (invalid a month ago from today):</Form.Label>
