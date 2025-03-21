@@ -9,12 +9,12 @@ there are three modes in the app, just weather search, news on the specific date
 <br>
 <h2>the home image</h2>
 <p>In the input section, you can type any city to get an info about country, and temperature</p>
-![home image](./src/screenshot2.png)
+<img src="./src/screenshot2.png"></img>
 <hr>
 <br>
 <h2>news mode</h2>
 <p>In the news mode, you can input the date and get the news at the day. In the source code, I use the NEWSAPI which response the news info. However, due to the pricing of API, you can use this mode in the local host, so you can download a zip, then npm install, and command "npm run dev" to use the news mode</p>
-![news image](./src/screenshot1.png)
+<img src="./src/screenshot1.png"></img>
 
 <hr>
 <p>tech stack</p>
